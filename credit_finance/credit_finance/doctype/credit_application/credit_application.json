@@ -1,0 +1,113 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "UUID",
+ "creation": "2025-10-19 11:10:01.476722",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "amount_requested",
+  "customer",
+  "loan_purpose",
+  "loan_term",
+  "remarks",
+  "additional_documents",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount_requested",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount Requested",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "loan_purpose",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Loan Purpose",
+   "options": "Personal Loan\nBusiness Credits\nRetail Store Credit\nAutomotive Financing\nProperty\nEducation Loan",
+   "reqd": 1
+  },
+  {
+   "description": "desired (or agreed) loan term in months. e.g. 12 months",
+   "fieldname": "loan_term",
+   "fieldtype": "Currency",
+   "label": "Loan Term",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "additional_documents",
+   "fieldtype": "Attach",
+   "label": "Additional Documents"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Credit Application",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-19 13:44:19.156679",
+ "modified_by": "Administrator",
+ "module": "Credit Finance",
+ "name": "Credit Application",
+ "naming_rule": "UUID",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Customer",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
