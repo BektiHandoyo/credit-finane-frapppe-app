@@ -35,6 +35,8 @@ def create_user(email: str, first_name: str, last_name: str, password:str, redir
 		user.flags.ignore_permissions = True
 		user.flags.ignore_password_policy = True
 		user.insert()
+  
+		user.add_roles("Customer")
 
 		# set default signup role as per Portal Settings
 		frappe.set_user(user.name)
